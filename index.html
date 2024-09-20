@@ -1,0 +1,218 @@
+---
+---
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+    <noscript>
+        <style>
+            .js-only {
+                display: none
+            }
+        </style>
+    </noscript>
+    <title>Jazz DeFreitas | Full Stack Web + Mobile Software Developer</title>
+</head>
+
+<body>
+    <!-- home -->
+    <div id="home" class="container-fluid p-0">
+        <div id="home-from-left" class="from-left">
+            <noscript id="main-noscript">
+                <h1 style="font-size: calc(2.5rem + 5vw)">
+                    Jazz DeFreitas
+                </h1>
+                <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
+                    Full Stack Web + Mobile Software Developer
+                </h2>
+                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </noscript>
+            <noscript>
+                <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
+            </noscript>
+            <div class="js-only">
+                <canvas id="matter-canvas"></canvas>
+                <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary">&#9660;</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div id="about" class="container">
+        <h2 class="text-center from-left">About Me</h2>
+        <p class="from-left">
+            I'm a software developer from Atlanta, Georgia. My passion for all things digital started from a young age, and
+            continues to grow to this day. I graduated with a degree in <b>Computer Science</b> from Kennesaw State University,
+            where I studied programming, code analysis, development planning, project management, and more. I also have
+            internship experience in <b>full stack web development</b>, as well as <b>cross-platform app development</b>. My
+            coding style is <b>thorough and detail-oriented</b>, and I am able to <b>adapt</b> to any changes in the development process that may come.
+        </p>
+        <div class="text-center from-left"><a href="Jazz_DeFreitas_Resume.pdf" target="_blank" class="btn btn-outline-primary mb-4">View my Resume</a></div>
+
+    </div>
+
+    <!-- work -->
+    <div id="work" class="container">
+        <h2 class="text-center from-left">My Work</h2>
+        <h3 class="text-center from-left">Projects</h3>
+        {% for project in site.data.projects %}
+        <div class="work-row row mb-4 from-left">
+            <div class="col-12 col-md-6 col-lg-4 text-center align-middle">
+                <img src="img/work/{{ project.image }}" class="work-img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-8 align-middle">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.body }}</p>
+                {% for button in project.buttons %}
+                <a href="{{ button.href }}" target="_blank" class="btn btn-outline-primary mb-4">{{ button.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <h3 class="from-left text-center">Games</h3>
+        <div class="row from-left">
+            <div class="col-12">
+                <p>I make games as a hobby. My games are developed in JavaScript with Phaser, and I publish them online to
+                    numerous sites.
+                    I ported my latest game, <b>Melody Shuffle</b>, to mobile using Apache Cordova, and published it
+                    on
+                    the
+                    <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App
+                        Store</a> and <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google
+                        Play
+                        Store</a>. My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw
+                    State
+                    University Global Game Jam in 2020, in which it was awarded third place.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank">
+                    <img src="img/games/melodyshuffle.png" class="game">
+                    <div class="gametext">
+                        Melody Shuffle - a musical puzzle game
+                    </div>
+                </a>
+            </div>
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank">
+                    <img src="img/games/rhythmrebuild.png" class="game">
+                    <div class="gametext">
+                        Rhythm Rebuild - a one button rhythm game
+                    </div>
+                </a>
+            </div>
+            <div class="from-left col-lg-4 col-md-12 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/foxbot" target="_blank">
+                    <img src="img/games/foxbot.png" class="game">
+                    <div class="gametext">
+                        FoxBot - a retro platformer
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center w-100 from-left">
+            <br>
+            <p>Along with programming and creating sprite art, I also compose music for my games.</p>
+            <div id="bandcamp-div">
+                <iframe id="bandcamp" class="js-only" seamless>
+                    <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
+                </iframe>
+                <noscript>
+                    <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/" seamless>
+                        <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
+                    </iframe>
+                </noscript>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- technologies -->
+    <div id="technologies" class="container text-center">
+        <h2 class="from-left pb-3">Techno&shy;logies I Use</h2>
+        <div class="row">
+            {% for skill in site.data.skills.big %}
+            <div class="col-lg-3 col-6 skill-big from-left">
+                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
+                <p>{{ skill }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            {% for skill in site.data.skills.small %}
+            <div class="col-lg-2 col-sm-4 col-6 skill-small from-left">
+                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
+                <p>{{ skill }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div id="contact" class="container text-center from-left">
+        <h2>Contact</h2>
+        <p>
+            You can contact me by email at <a href="mailto:jazzdefreitas@gmail.com">jazzdefreitas<wbr>@gmail.com</a>,
+            or message my <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank">LinkedIn account</a>.
+        </p>
+    </div>
+
+    <footer class="text-center text-grey">
+        © Jazz DeFreitas
+    </footer>
+
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/matter.min.js"></script>
+    <script src="js/namedisplay.js"></script>
+    <script>
+        const fromLeftElements = document.querySelectorAll('.from-left');
+        for (var i = 0; i < fromLeftElements.length; i++) {
+            var element = fromLeftElements[i];
+            element.classList.remove('from-left');
+            element.classList.add('hidden');
+        }
+
+        function checkScroll() {
+            var sameIndex = 0;
+            for (var i = 0; i < fromLeftElements.length; i++) {
+                var element = fromLeftElements[i];
+                var top = element.getBoundingClientRect().top;
+                if (top - window.innerHeight < -100 && element.classList.contains('hidden')) {
+                    element.style.opacity = '0';
+                    element.style.animationDelay = (sameIndex * 50) + 'ms';
+                    element.classList.remove('hidden');
+                    element.classList.add('from-left');
+                    if (top > 0)
+                        sameIndex++;
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+
+        $(window).bind("load", function () {
+            setTimeout(function () {
+                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/');
+            }, 100);
+        });
+
+        $(document).ready(function () {
+            startMatter();
+        });
+    </script>
+</body>
+
+</html>

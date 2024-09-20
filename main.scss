@@ -1,0 +1,203 @@
+---
+---
+
+@import "functions";
+@import "variables";
+@import "mixins/_breakpoints";
+
+@font-face {
+    font-family: "comfortaa";
+    src: url("font/comfortaa-regular-webfont.woff2") format("woff2"),
+        url("font/comfortaa-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$theme-colors: (
+    "primary": #43a3f2,
+    "grey": #696985,
+    "dark": #252533,
+    "darker": #1c1c26,
+    "darkest": #151519,
+);
+
+$body-bg: theme-color("darker");
+$link-color: theme-color("primary");
+$btn-border-radius: 100px;
+$btn-border-width: 2px;
+$body-color: #fff;
+$font-family-base: comfortaa, sans-serif;
+$font-size-base: 1.2rem;
+
+// $h1-font-size: 8rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2rem;
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    height: 100vh;
+    min-height: 400px;
+    background: url("img/bg.png") repeat center center;
+
+    #home-from-left {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+        }
+
+        #arrow-btn {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            padding: 10px 15px;
+            left: 50%;
+            top: 92%;
+        }
+
+        #main-noscript {
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            width: 100%;
+        }
+
+        :not(noscript) {
+            .btn {
+                position: absolute;
+                transform: translate(0, -50%);
+            }
+
+            #linkedin-btn {
+                right: calc(50% + 50px);
+            }
+            #github-btn {
+                left: calc(50% + 50px);
+            }
+            @media only screen and (max-width: 400px) {
+                #linkedin-btn {
+                    right: calc(50% - 2px);
+                }
+                #github-btn {
+                    left: calc(50% + 12px);
+                }
+            }
+
+            @media only screen and (max-width: 300px) {
+                #linkedin-btn {
+                    right: calc(50%);
+                    transform: translate(50%, -50%);
+                }
+                #github-btn {
+                    left: calc(50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+#matter-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#bandcamp-div {
+    display: inline-block;
+    width: 100%;
+    max-width: 700px;
+    height: 120px;
+}
+
+#bandcamp {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    padding: 40px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.game {
+    width: 300px;
+    max-width: 80vw;
+}
+
+.work-row {
+    display: flex;
+    align-items: center;
+}
+
+.work-img {
+    width: 300px;
+    max-width: 80vw;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.skill-big,
+.skill-small p {
+    word-break: break-all;
+}
+
+@include media-breakpoint-up(lg) {
+    .skill-big,
+    .skill-small p {
+        word-break: normal;
+    }
+}
+
+.skill-big img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.skill-small img {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+@keyframes fade-in-frames {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    animation: fade-in-frames 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes from-left-frames {
+    from {
+        opacity: 0;
+        right: 80px;
+    }
+    to {
+        opacity: 1;
+        right: 0px;
+    }
+}
+.from-left {
+    animation: from-left-frames 0.8s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@import "bootstrap";
