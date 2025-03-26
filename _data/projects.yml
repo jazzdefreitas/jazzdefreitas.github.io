@@ -1,3 +1,12 @@
+- title: Idly Calendar
+  body: >
+    I build this calendar app from scratch using Laravel and Vue, later leading a team of 3 developers to complete the project.
+    This web and mobile app allows users to sync in different calendar platforms and share events with friends.
+  image: calendar.gif
+  buttons:
+    - text: View Site
+      href: https://staging.idlycalendar.com/
+
 - title: SongDaily
   body: >
     This is a daily music recommendation app that I wrote in Flutter
@@ -9,6 +18,72 @@
       href: https://apps.apple.com/us/app/songdaily/id1572532967
     - text: View on Google Play Store
       href: https://play.google.com/store/apps/details?id=com.jazzd.songdaily
+
+- title: Metwork
+  body: >
+    A networking site for lawyers and paralegals to connect and share case referrals.
+    We built the MVP for this client using Laravel and Vue, which we then transformed into a full web app before transferring it to the client's in-house team.
+  image: metwork.png
+  buttons:
+    - text: View Site
+      href: https://metwork.com/
+
+- title: Shopr Rewards
+  body: >
+    This is a coupon loyalty rewards app that I wrote with Capacitor and Ionic.
+    It was developed alongside a Laravel/Vue Admin panel and CRM for web.
+  image: shopr.png
+  buttons:
+    - text: View Site
+      href: https://shoprrewards.com/
+    - text: View on App Store
+      href: https://apps.apple.com/us/app/shopr-rewards/id6569257938
+    - text: View on Google Play Store
+      href: https://play.google.com/store/apps/details?id=com.shoprrewards.app
+
+- title: Redwire Virtual Space Station
+  body: >
+    A 360-degree virtual tour of a space station, with interactive info nodes that give information about the station's components.
+    I made this for the client in Vue.js.
+  image: redwire.gif
+
+- title: Doctor's Beyond
+  body: >
+    We received this project from a client who needed a barebones prototype upgraded into a full web app.
+    I worked on the front and backend of this project, converting it from pure PHP to Laravel. I also was responsible for porting it to mobile.
+  image: doctors.png
+  buttons:
+    - text: View Site
+      href: https://doctorsbeyond.com/
+    - text: View on App Store
+      href: https://apps.apple.com/us/app/doctorsbeyond-online-doctors/id1551210290
+    - text: View on Google Play Store
+      href: https://play.google.com/store/apps/details?id=com.app.doctorsbeyond
+
+- title: Roofing Contractor Landing Page
+  body: >
+    This is a landing page I made for a roofing contractor in the US.
+    It is a static site that includes an embedded intake form for potential clients.
+  image: roofing.png
+  buttons:
+    - text: View Site
+      href: https://allpointsroofingandconstruction.com/
+
+- title: Imetco OQS
+  body: >
+    This is an online quoting system for a metal manufacturer in the US, meant to replace their old .NET system.
+    It was written with Laravel and Vue with 2 other developers.
+  image: imetco.png
+
+- title: Stock Market Alert Platform
+  body: >
+    I wrote this web app using Django for my Distributed computing course in college.
+    It is a stock market website that allows users to create accounts and keep tabs
+    on stocks.
+  image: distcompstocks.png
+#  buttons:
+#    - text: View Site
+#      href: https://jazzdefreitas.pythonanywhere.com/
 
 - title: ASAP Financial Aid Platform
   body: >
@@ -28,16 +103,6 @@
 #  buttons:
 #    - text: View Site (requires account)
 #      href: https://premarket.ngefinancial.com/
-
-- title: Stock Market Alert Platform
-  body: >
-    I wrote this web app using Django for my Distributed computing course in college.
-    It is a stock market website that allows users to create accounts and keep tabs
-    on stocks.
-  image: distcompstocks.png
-#  buttons:
-#    - text: View Site
-#      href: https://jazzdefreitas.pythonanywhere.com/
 
 #- title: Java to Python Translator
 #  body: >
