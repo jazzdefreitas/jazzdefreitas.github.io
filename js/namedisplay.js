@@ -87,7 +87,7 @@ function startMatter() {
             var ratio = Math.max(canvas.height / canvas.offsetHeight, 1);
             var y = (canvas.height / 2 + name3Pos + 140) / ratio + 20 * ratio;
 
-            if (canvas.offsetWidth < 300)
+            if (window.innerWidth <= 300)
                 y += 65 * i
 
             y = Math.min(y, canvas.offsetHeight * .92);
@@ -103,6 +103,7 @@ function startMatter() {
         Bodies = Matter.Bodies,
         Body = Matter.Body,
         Sleeping = Matter.Sleeping;
+        Runner = Matter.Runner;
 
     // create an engine
     var engine = Engine.create({
@@ -221,8 +222,14 @@ function startMatter() {
     resizeCanvas();
 
     World.add(engine.world, [name1, name2, name3]);
-    Engine.run(engine);
+
     Render.run(render);
+
+    var runner = Runner.create({
+        isFixed: true,
+        delta: 1000 / 110,
+    });
+    Runner.run(runner, engine);
 }
 
 function loadImage(src, onSuccess, onError) {

@@ -1,29 +1,43 @@
-big: 
+big:
+  - PHP
+  - Laravel
+  - HTML
+  - Javascript
+  - Typescript
+  - CSS
+  - Sass/SCSS
+  - Vue.js
+  - Vuetify
+  - Tailwind CSS
+  - Bootstrap
+  - Ionic
+  - Capacitor
+  - Cordova
   - Python
   - Django
   - Dart
   - Flutter
-  - JavaScript
   - Node.js
-  - HTML5
-  - CSS
-
-small:
-  - Bootstrap
-  - Sass
-  - Apache Cordova
+  - SQL
+  - GraphQL
   - Java
   - C#
   - C++
-  - SQL
-  - GraphQL
   - Ada
+  - WordPress
+  - Git/GitHub
+  - Docker
+  - Github Actions
+  - AWS
+  - Redis
+  - PythonAnywhere
   - Jekyll
   - Phaser
-  - Git/GitHub
-  - PythonAnywhere
-  - Visual Studio
-  - VS Code
+  - PhpStorm
   - PyCharm
+  - VS Code
+  - Visual Studio
+  - Xcode
+  - Android Studio
   - Eclipse
   - CodeLite

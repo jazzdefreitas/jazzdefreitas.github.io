@@ -8,27 +8,26 @@
     - text: View on App Store
       href: https://apps.apple.com/us/app/songdaily/id1572532967
     - text: View on Google Play Store
-      href: https://play.google.com/store/apps/details?id=com.jazzdgames.songdaily
+      href: https://play.google.com/store/apps/details?id=com.jazzd.songdaily
 
 - title: ASAP Financial Aid Platform
   body: >
     This is a platform for tracking students' financial aid statuses through the college
     application and enrollment process. I worked on this application with team members 
-    during an internship, and I was responsible for signifigant portions of the back-end code.
+    during an internship, and I was responsible for the majority of the back-end code.
   image: asap.png
-  buttons:
-    - text: View Site (requires account)
-      href: https://edu.ngefinancial.com/
+#  buttons:
+#    - text: View Site (requires account)
+#      href: https://edu.ngefinancial.com/
 
 - title: Premarket Stock Analysis Platform
   body: >
     This Django app analyzes trends in early market stock data to give traders alerts
-    on which stocks could increase in the regular market hours. I was a developer early
-    in the project, and I developed the site's prototype versions.
+    on which stocks could increase in the regular market hours. I developed the site's MVP.
   image: premarket.png
-  buttons:
-    - text: View Site (requires account)
-      href: https://premarket.ngefinancial.com/
+#  buttons:
+#    - text: View Site (requires account)
+#      href: https://premarket.ngefinancial.com/
 
 - title: Stock Market Alert Platform
   body: >
@@ -36,18 +35,18 @@
     It is a stock market website that allows users to create accounts and keep tabs
     on stocks.
   image: distcompstocks.png
-  buttons:
-    - text: View Site
-      href: https://jazzdefreitas.pythonanywhere.com/
+#  buttons:
+#    - text: View Site
+#      href: https://jazzdefreitas.pythonanywhere.com/
 
-- title: Java to Python Translator
-  body: >
-    A Python application that attempts to translate Java code into Python code. It can handle basic programs.
-    This was written as part of a team for my Senior Project course in college.
-  image: java2python.png
-  buttons:
-    - text: View Site
-      href: https://java2python.pythonanywhere.com/
+#- title: Java to Python Translator
+#  body: >
+#    A lexer written in Python that translates Java into Python. It can handle basic programs.
+#    This was written as part of a team for my Senior Project course in college.
+#  image: java2python.png
+##  buttons:
+##    - text: View Site
+##      href: https://java2python.pythonanywhere.com/
 
 - title: K-means Iris Classification
   body: >

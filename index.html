@@ -26,7 +26,7 @@
                     Jazz DeFreitas
                 </h1>
                 <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
-                    Full Stack Web + Mobile Software Developer
+                    Full Stack Web + Mobile Dev
                 </h2>
                 <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
                 <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
@@ -38,7 +38,7 @@
                 <canvas id="matter-canvas"></canvas>
                 <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
                 <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
-                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary">&#9660;</a>
+                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary text-nowrap">Portfolio &#9660;</a>
 
             </div>
         </div>
@@ -48,20 +48,29 @@
     <div id="about" class="container">
         <h2 class="text-center from-left">About Me</h2>
         <p class="from-left">
-            I'm a software developer from Atlanta, Georgia. My passion for all things digital started from a young age, and
+            I'm a Full Stack dev from Atlanta, Georgia. My passion for software started from a young age, and
             continues to grow to this day. I graduated with a degree in <b>Computer Science</b> from Kennesaw State University,
-            where I studied programming, code analysis, development planning, project management, and more. I also have
-            internship experience in <b>full stack web development</b>, as well as <b>cross-platform app development</b>. My
-            coding style is <b>thorough and detail-oriented</b>, and I am able to <b>adapt</b> to any changes in the development process that may come.
+            where I studied programming, code analysis, development planning, and project management. I have over <b>5 years</b> of experience in
+            developing web and mobile applications, spanning personal projects, internship experience, freelance work, and full-time employment.
+            My coding style is <b>thorough and detail-oriented</b>, and I have no problem adapting to changed in tech stacks or development schedules.
         </p>
         <div class="text-center from-left"><a href="Jazz_DeFreitas_Resume.pdf" target="_blank" class="btn btn-outline-primary mb-4">View my Resume</a></div>
-
+        <p class="from-left">
+            Languages, frameworks, IDEs, and other technologies that I'm comfortable using include:
+        </p>
+        <div class="row from-left">
+            {% for skill in site.data.skills.big %}
+            <div class="col-lg-2 col-sm-4 col-6 skill">
+                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
+                <span>{{ skill }}</span>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
     <!-- work -->
     <div id="work" class="container">
         <h2 class="text-center from-left">My Work</h2>
-        <h3 class="text-center from-left">Projects</h3>
         {% for project in site.data.projects %}
         <div class="work-row row mb-4 from-left">
             <div class="col-12 col-md-6 col-lg-4 text-center align-middle">
@@ -76,21 +85,17 @@
             </div>
         </div>
         {% endfor %}
+    </div>
 
-        <h3 class="from-left text-center">Games</h3>
+    <div id="games" class="container">
+        <h2 class="from-left text-center">Games</h2>
         <div class="row from-left">
             <div class="col-12">
-                <p>I make games as a hobby. My games are developed in JavaScript with Phaser, and I publish them online to
-                    numerous sites.
-                    I ported my latest game, <b>Melody Shuffle</b>, to mobile using Apache Cordova, and published it
-                    on
-                    the
-                    <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App
-                        Store</a> and <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google
-                        Play
-                        Store</a>. My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw
-                    State
-                    University Global Game Jam in 2020, in which it was awarded third place.
+                <p>I make games as a hobby. My games are developed in Javascript with Phaser, and I publish them web as well as the
+                    <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App Store</a>
+                    and
+                    <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google Play Store</a>.
+                    My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw State University Global Game Jam in 2020, in which it was awarded third place.
                 </p>
             </div>
         </div>
@@ -120,41 +125,46 @@
                 </a>
             </div>
         </div>
-        <div class="text-center w-100 from-left">
-            <br>
-            <p>Along with programming and creating sprite art, I also compose music for my games.</p>
-            <div id="bandcamp-div">
-                <iframe id="bandcamp" class="js-only" seamless>
-                    <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
-                </iframe>
-                <noscript>
-                    <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/" seamless>
-                        <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
-                    </iframe>
-                </noscript>
-            </div>
-        </div>
     </div>
 
 
     <!-- technologies -->
-    <div id="technologies" class="container text-center">
-        <h2 class="from-left pb-3">Techno&shy;logies I Use</h2>
-        <div class="row">
-            {% for skill in site.data.skills.big %}
-            <div class="col-lg-3 col-6 skill-big from-left">
-                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
-                <p>{{ skill }}</p>
+<!--    <div id="technologies" class="container text-center">-->
+<!--        <h2 class="from-left pb-3">Techno&shy;logies I Use</h2>-->
+<!--        <div class="row">-->
+<!--            {% for skill in site.data.skills.big %}-->
+<!--            <div class="col-lg-3 col-6 skill-big from-left">-->
+<!--                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">-->
+<!--                <p>{{ skill }}</p>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            {% for skill in site.data.skills.small %}-->
+<!--            <div class="col-lg-2 col-sm-4 col-6 skill-small from-left">-->
+<!--                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">-->
+<!--                <p>{{ skill }}</p>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="contact" class="container text-center from-left">
+        <h2>Music</h2>
+        <div class="text-center">
+            <p>
+                Outside of programming, my main hobby is piano. Here's a song from my latest album.
+            </p>
+            <div id="bandcamp-div">
+                <iframe id="bandcamp" class="js-only" seamless>
+                    <a href="https://jazzd.bandcamp.com/track/back-to-me">Back to Me by Jazz DeFreitas</a>
+                </iframe>
+                <noscript>
+                    <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=2480104438/size=large/bgcol=242C33/linkcol=4ec5ec/artwork=none/track=1054051456/transparent=true/" seamless>
+                        <a href="https://jazzd.bandcamp.com/track/back-to-me">Back to Me by Jazz DeFreitas</a>
+                    </iframe>
+                </noscript>
             </div>
-            {% endfor %}
-        </div>
-        <div class="row">
-            {% for skill in site.data.skills.small %}
-            <div class="col-lg-2 col-sm-4 col-6 skill-small from-left">
-                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
-                <p>{{ skill }}</p>
-            </div>
-            {% endfor %}
         </div>
     </div>
 
@@ -205,13 +215,15 @@
 
         $(window).bind("load", function () {
             setTimeout(function () {
-                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/');
+                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=2480104438/size=large/bgcol=242C33/linkcol=4ec5ec/artwork=none/track=1054051456/transparent=true/');
             }, 100);
         });
 
         $(document).ready(function () {
             startMatter();
         });
+
+        console.log('%c Welcome to my site! I\'d love to be a part of your dev team!', 'background: #111; color: #43a3f2');
     </script>
 </body>
 
