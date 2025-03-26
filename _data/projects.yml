@@ -85,6 +85,15 @@
 #    - text: View Site
 #      href: https://jazzdefreitas.pythonanywhere.com/
 
+- title: Revolve
+  body: >
+    We were given an unfinished Electron app that was meant to be a unique note taking and productivite app.
+    We converted it into a functional MVP using Laravel and Vue.
+  image: revolve.png
+#  buttons:
+#    - text: View Site
+#      href: https://jazzdefreitas.pythonanywhere.com/
+
 - title: ASAP Financial Aid Platform
   body: >
     This is a platform for tracking students' financial aid statuses through the college
