@@ -14,7 +14,7 @@
             }
         </style>
     </noscript>
-    <title>Jazz DeFreitas | Full Stack Web + Mobile Software Developer</title>
+    <title>Jazz DeFreitas | Full Stack Dev</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                     Jazz DeFreitas
                 </h1>
                 <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
-                    Full Stack Web + Mobile Dev
+                    Full Stack Dev<br>Web + Mobile
                 </h2>
                 <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
                 <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
@@ -77,7 +77,7 @@
                 <img src="img/work/{{ project.image }}" class="work-img">
             </div>
             <div class="col-12 col-md-6 col-lg-7 align-middle">
-                <h4>{{ project.title }}</h4>
+                <h4 class="mt-2">{{ project.title }}</h4>
                 <p>{{ project.body }}</p>
                 {% for button in project.buttons %}
                 <a href="{{ button.href }}" target="_blank" class="btn btn-outline-primary mb-4">{{ button.text }}</a>
@@ -149,7 +149,8 @@
 <!--        </div>-->
 <!--    </div>-->
 
-    <div id="contact" class="container text-center from-left">
+    <!-- music -->
+    <div id="music" class="container text-center from-left">
         <h2>Music</h2>
         <div class="text-center">
             <p>
@@ -217,13 +218,16 @@
             setTimeout(function () {
                 $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=2480104438/size=large/bgcol=242C33/linkcol=4ec5ec/artwork=none/track=1054051456/transparent=true/');
             }, 100);
+
+            setTimeout(function() {
+                console.clear();
+                console.log('%c Welcome to my site! I\'d love to be a part of your dev team!', 'background: #111; color: #43a3f2; font-size: 2em');
+            }, 500);
         });
 
         $(document).ready(function () {
             startMatter();
         });
-
-        console.log('%c Welcome to my site! I\'d love to be a part of your dev team!', 'background: #111; color: #43a3f2');
     </script>
 </body>
 

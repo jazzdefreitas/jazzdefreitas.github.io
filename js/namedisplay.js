@@ -224,11 +224,7 @@ function startMatter() {
     World.add(engine.world, [name1, name2, name3]);
 
     Render.run(render);
-
-    var runner = Runner.create({
-        isFixed: true,
-        delta: 1000 / 110,
-    });
+    var runner = Runner.create();
     Runner.run(runner, engine);
 }
 
