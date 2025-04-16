@@ -5,7 +5,7 @@
   image: calendar.gif
   buttons:
     - text: View Site
-      href: https://staging.idlycalendar.com/
+      href: https://app.idlycalendar.com/
 
 - title: SongDaily
   body: >
