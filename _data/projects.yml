@@ -104,7 +104,7 @@
 #    - text: View Site (requires account)
 #      href: https://edu.ngefinancial.com/
 
-- title: Premarket Stock Analysis Platform
+- title: Premarket Gold
   body: >
     This Django app analyzes trends in early market stock data to give traders alerts
     on which stocks could increase in the regular market hours. I developed the site's MVP.
