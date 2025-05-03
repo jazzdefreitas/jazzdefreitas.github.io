@@ -23,7 +23,7 @@
   body: >
     A networking site for lawyers and paralegals to connect and share case referrals.
     We built the MVP for this client using Laravel and Vue, which we then transformed into a full web app before transferring it to the client's in-house team.
-  image: metwork.png
+  image: metwork.gif
   buttons:
     - text: View Site
       href: https://metwork.com/
