@@ -5,229 +5,289 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jazz DeFreitas — Senior Full Stack Engineer based in Atlanta, GA. 6+ years shipping web, mobile, and SaaS applications.">
     <link rel="stylesheet" href="main.css">
-    <noscript>
-        <style>
-            .js-only {
-                display: none
-            }
-        </style>
-    </noscript>
-    <title>Jazz DeFreitas | Full Stack Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Jazz DeFreitas | Senior Full Stack Engineer</title>
 </head>
 
 <body>
-    <!-- home -->
-    <div id="home" class="container-fluid p-0">
-        <div id="home-from-left" class="from-left">
-            <noscript id="main-noscript">
-                <h1 style="font-size: calc(2.5rem + 5vw)">
-                    Jazz DeFreitas
-                </h1>
-                <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
-                    Full Stack Dev<br>Web + Mobile
-                </h2>
-                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
-                <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
-            </noscript>
-            <noscript>
-                <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
-            </noscript>
-            <div class="js-only">
-                <canvas id="matter-canvas"></canvas>
-                <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
-                <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
-                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary text-nowrap">Portfolio &#9660;</a>
 
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#home">JD</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#work">Work</a>
+                <a href="#games">Games</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile-menu">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#work">Work</a>
+            <a href="#games">Games</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-content">
+            <p class="hero-label">Hi, I'm</p>
+            <h1 class="hero-name">Jazz DeFreitas</h1>
+            <h2 class="hero-title">Senior Full Stack Engineer</h2>
+            <p class="hero-sub">6+ years shipping production web, mobile &amp; SaaS — Laravel · Vue.js · AWS · Flutter</p>
+            <div class="hero-actions">
+                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn-primary">LinkedIn</a>
+                <a href="https://github.com/jazzdefreitas" target="_blank" class="btn-outline">GitHub</a>
+                <a href="#work" class="btn-outline">View Work ↓</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- about -->
-    <div id="about" class="container">
-        <h2 class="text-center from-left">About Me</h2>
-        <p class="from-left">
-            I'm a Full Stack dev from Atlanta, Georgia. My passion for software started from a young age, and
-            continues to grow to this day. I graduated with a degree in <b>Computer Science</b> from Kennesaw State University,
-            where I studied programming, code analysis, development planning, and project management. I have over <b>5 years</b> of experience in
-            developing web and mobile applications, spanning personal projects, internship experience, freelance work, and full-time employment.
-            My coding style is <b>thorough and detail-oriented</b>, and I have no problem adapting to changed in tech stacks or development schedules.
-        </p>
-        <p class="from-left">
-            Languages, frameworks, IDEs, and other technologies that I'm comfortable using include:
-        </p>
-        <div class="row from-left">
-            {% for skill in site.data.skills.big %}
-            <div class="col-lg-2 col-sm-4 col-6 skill">
-                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
-                <span>{{ skill }}</span>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">About</h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>I'm a Senior Full Stack Engineer based in Atlanta, GA, with <strong>6+ years</strong> of experience shipping production web, mobile, and SaaS applications. I've worked across the entire stack — from database design and REST API architecture to frontend UI and mobile app releases on App Store and Google Play.</p>
+                    <p>I specialize in <strong>Laravel</strong> and <strong>Vue.js</strong> on the web, <strong>Flutter</strong> and <strong>Capacitor</strong> on mobile, and <strong>AWS</strong> for cloud infrastructure. I've pioneered AI-assisted development workflows that cut average feature delivery time by <strong>76%</strong> — and I've been the engineer teams lean on for fast turnarounds, complex integrations, and full ownership.</p>
+                    <p>I hold a <strong>B.S. in Computer Science</strong> from Kennesaw State University (GPA: 3.8) and am comfortable leading features solo or mentoring junior developers on a team.</p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-num">6+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Production Apps Shipped</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">76%</span>
+                        <span class="stat-label">Faster Delivery via AI Workflows</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">200k+</span>
+                        <span class="stat-label">Game Plays Across Platforms</span>
+                    </div>
+                </div>
             </div>
-            {% endfor %}
-        </div>
-    </div>
 
-    <!-- work -->
-    <div id="work" class="container">
-        <h2 class="text-center from-left">My Work</h2>
-        {% for project in site.data.projects %}
-        <div class="work-row row mb-4 from-left">
-            <div class="col-12 col-md-6 col-lg-5 text-center align-middle">
-                <img src="img/work/{{ project.image }}" class="work-img">
-            </div>
-            <div class="col-12 col-md-6 col-lg-7 align-middle">
-                <h4 class="mt-2">{{ project.title }}</h4>
-                <p>{{ project.body }}</p>
-                {% for button in project.buttons %}
-                <a href="{{ button.href }}" target="_blank" class="btn btn-outline-primary mb-4">{{ button.text }}</a>
+            <div class="skills-section reveal">
+                <h3 class="skills-title">Tech Stack</h3>
+                {% for category in site.data.skills.categories %}
+                <div class="skill-category">
+                    <h4 class="skill-cat-name">{{ category.name }}</h4>
+                    <div class="skill-chips">
+                        {% for skill in category.skills %}
+                        <div class="skill-chip">
+                            <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png" alt="{{ skill }}">
+                            <span>{{ skill }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
-        {% endfor %}
-    </div>
+    </section>
 
-    <div id="games" class="container">
-        <h2 class="from-left text-center">Games</h2>
-        <div class="row from-left">
-            <div class="col-12">
-                <p>I make games as a hobby. My games are developed in Javascript with Phaser, and I publish them web as well as the
-                    <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App Store</a>
-                    and
-                    <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google Play Store</a>.
-                    My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw State University Global Game Jam in 2020, in which it was awarded third place.
-                </p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title reveal">Experience</h2>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Solutions Engineer</h3>
+                                <p class="timeline-company">22Miles &mdash; Peachtree Corners, GA</p>
+                            </div>
+                            <span class="timeline-date">May 2025 &ndash; Apr 2026</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Built bidirectional REST API integrations connecting the 22Miles digital signage platform to enterprise systems including room booking, calendar, and workplace management services</li>
+                            <li>Rebuilt major CMS modules including the Template Center and AI-powered chat window, modernizing the web platform powering enterprise digital signage management</li>
+                            <li>Pioneered AI-assisted development workflows (prompt engineering, agentic coding, AI-augmented code review), cutting average feature delivery time by <strong>76%</strong></li>
+                            <li>Resolved Tier 3 escalations on code-level defects and integration failures across Windows, Linux, Android, BrightSign, and SoC signage hardware using Sentry, Postman, and live tracing</li>
+                            <li>Operated as the sole onshore engineer at the Atlanta office; cut integration and Tier 3 resolution time by <strong>51%</strong> through direct, real-time engineering engagement</li>
+                            <li>Wrote developer-grade installation runbooks, integration guides, and feature tutorials used by clients, support staff, and internal engineering</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>REST APIs</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Linux</span>
+                            <span>Sentry</span>
+                            <span>AI Tooling</span>
+                            <span>Technical Writing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Full Stack Developer</h3>
+                                <p class="timeline-company">Applied Imagination &mdash; Atlanta, GA</p>
+                            </div>
+                            <span class="timeline-date">Aug 2021 &ndash; May 2025</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Shipped 10+ web and mobile applications including Idly (calendar sync), Shopr (coupon rewards), Metwork (legal networking), and quoting tools for industrial clients; performed full frontend and backend responsibilities within LAMP environments</li>
+                            <li>Served as lead developer on Idly and lead frontend developer on Shopr; delivered features end-to-end and coordinated with design, QA, and clients</li>
+                            <li>Cut cloud costs <strong>60&ndash;85%</strong> on select projects by migrating from EC2 to Lambda serverless; automated workflows with GitHub Actions</li>
+                            <li>Built cross-platform mobile apps using Capacitor, Cordova, and Vue/Ionic; managed full release lifecycle on App Store and Google Play</li>
+                            <li>Implemented and debugged features across 20+ live applications using Sentry, PHPUnit, Cypress, and Postman; mentored junior developers and built an internal task-tracking system adopted company-wide</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Laravel</span>
+                            <span>Vue.js</span>
+                            <span>PHP</span>
+                            <span>AWS</span>
+                            <span>Capacitor</span>
+                            <span>Flutter</span>
+                            <span>MySQL</span>
+                            <span>GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Full Stack Software Engineer</h3>
+                                <p class="timeline-company">Net Global Enterprises &mdash; La Jolla, CA</p>
+                            </div>
+                            <span class="timeline-date">Jun 2020 &ndash; Feb 2021</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Led a team of intern developers delivering full-stack projects: a student financial aid CRM, a stock trading performance tracker, and a CRM for Amazon&rsquo;s Military SkillBridge initiative</li>
+                            <li>Built predictive analytics tooling to forecast stock market trends during regular hours from pre-market data, applying statistical techniques with Pandas and NumPy</li>
+                            <li>Designed and deployed full frontend/backend applications with Python, Django, MySQL, and Heroku</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>MySQL</span>
+                            <span>Heroku</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-card reveal">
+                <div class="edu-icon">🎓</div>
+                <div>
+                    <h3 class="edu-school">Kennesaw State University</h3>
+                    <p class="edu-degree">B.S. in Computer Science &mdash; GPA: 3.8</p>
+                    <p class="edu-date">Aug 2017 &ndash; May 2021 &middot; Marietta, GA &middot; College of Computing and Software Engineering</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
-                <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank">
-                    <img src="img/games/melodyshuffle.png" class="game">
-                    <div class="gametext">
-                        Melody Shuffle - a musical puzzle game
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Projects</h2>
+            <p class="section-sub reveal">A selection of web and mobile applications I've built — for clients, employers, and myself.</p>
+            <div class="projects-grid">
+                {% for project in site.data.projects %}
+                <div class="project-card reveal">
+                    <div class="project-img-wrap">
+                        <img src="img/work/{{ project.image }}" alt="{{ project.title }}" class="project-img" loading="lazy">
                     </div>
-                </a>
-            </div>
-            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
-                <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank">
-                    <img src="img/games/rhythmrebuild.png" class="game">
-                    <div class="gametext">
-                        Rhythm Rebuild - a one button rhythm game
+                    <div class="project-info">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-desc">{{ project.body }}</p>
+                        <div class="project-btns">
+                            {% for button in project.buttons %}
+                            <a href="{{ button.href }}" target="_blank" class="btn-sm">{{ button.text }}</a>
+                            {% endfor %}
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="from-left col-lg-4 col-md-12 col-sm-12 text-center">
-                <a href="https://jazzdgames.itch.io/foxbot" target="_blank">
-                    <img src="img/games/foxbot.png" class="game">
-                    <div class="gametext">
-                        FoxBot - a retro platformer
-                    </div>
-                </a>
+                </div>
+                {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <!-- technologies -->
-<!--    <div id="technologies" class="container text-center">-->
-<!--        <h2 class="from-left pb-3">Techno&shy;logies I Use</h2>-->
-<!--        <div class="row">-->
-<!--            {% for skill in site.data.skills.big %}-->
-<!--            <div class="col-lg-3 col-6 skill-big from-left">-->
-<!--                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">-->
-<!--                <p>{{ skill }}</p>-->
-<!--            </div>-->
-<!--            {% endfor %}-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            {% for skill in site.data.skills.small %}-->
-<!--            <div class="col-lg-2 col-sm-4 col-6 skill-small from-left">-->
-<!--                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">-->
-<!--                <p>{{ skill }}</p>-->
-<!--            </div>-->
-<!--            {% endfor %}-->
-<!--        </div>-->
-<!--    </div>-->
-
-    <!-- music -->
-    <div id="music" class="container text-center from-left">
-        <h2>Music</h2>
-        <div class="text-center">
-            <p>
-                Outside of programming, my main hobby is piano. Here's a song from my latest album.
+    <!-- GAMES -->
+    <section id="games" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title reveal">Games</h2>
+            <p class="section-sub reveal">
+                I build browser and mobile games as a hobby using JavaScript and Phaser. Published on the
+                <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App Store</a> and
+                <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google Play</a>,
+                and featured on Coolmath, Newgrounds, Kongregate, and more &mdash; with over <strong>200,000 plays</strong> across platforms.
+                <em>Rhythm Rebuild</em> placed <strong>3rd at the KSU Global Game Jam 2020</strong>.
             </p>
-            <div id="bandcamp-div">
-                <iframe id="bandcamp" class="js-only" seamless>
-                    <a href="https://jazzd.bandcamp.com/track/back-to-me">Back to Me by Jazz DeFreitas</a>
-                </iframe>
-                <noscript>
-                    <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=2480104438/size=large/bgcol=242C33/linkcol=4ec5ec/artwork=none/track=1054051456/transparent=true/" seamless>
-                        <a href="https://jazzd.bandcamp.com/track/back-to-me">Back to Me by Jazz DeFreitas</a>
-                    </iframe>
-                </noscript>
+            <div class="games-grid">
+                <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank" class="game-card reveal">
+                    <img src="img/games/melodyshuffle.png" alt="Melody Shuffle" loading="lazy">
+                    <div class="game-info">
+                        <h4>Melody Shuffle</h4>
+                        <p>A musical puzzle game</p>
+                    </div>
+                </a>
+                <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank" class="game-card reveal">
+                    <img src="img/games/rhythmrebuild.png" alt="Rhythm Rebuild" loading="lazy">
+                    <div class="game-info">
+                        <h4>Rhythm Rebuild</h4>
+                        <p>A one-button rhythm game &mdash; 🏆 3rd place, KSU Game Jam 2020</p>
+                    </div>
+                </a>
+                <a href="https://jazzdgames.itch.io/foxbot" target="_blank" class="game-card reveal">
+                    <img src="img/games/foxbot.png" alt="FoxBot" loading="lazy">
+                    <div class="game-info">
+                        <h4>FoxBot</h4>
+                        <p>A retro platformer</p>
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section text-center">
+        <div class="container">
+            <h2 class="section-title reveal">Let's Work Together</h2>
+            <p class="contact-sub reveal">I'm open to senior engineering roles, consulting, and interesting projects. Reach out and let's talk.</p>
+            <div class="contact-actions reveal">
+                <a href="mailto:jazzdefreitas@gmail.com" class="btn-primary">jazzdefreitas@gmail.com</a>
+                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn-outline">LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- contact -->
-    <div id="contact" class="container text-center from-left">
-        <h2>Contact</h2>
-        <p>
-            You can contact me by email at <a href="mailto:jazzdefreitas@gmail.com">jazzdefreitas<wbr>@gmail.com</a>,
-            or message my <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank">LinkedIn account</a>.
-        </p>
-    </div>
-
-    <footer class="text-center text-grey">
-        © Jazz DeFreitas
+    <footer>
+        <span>&copy; 2026 Jazz DeFreitas</span>
     </footer>
 
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/matter.min.js"></script>
-    <script src="js/namedisplay.js"></script>
-    <script>
-        const fromLeftElements = document.querySelectorAll('.from-left');
-        for (var i = 0; i < fromLeftElements.length; i++) {
-            var element = fromLeftElements[i];
-            element.classList.remove('from-left');
-            element.classList.add('hidden');
-        }
+    <script src="js/site.js"></script>
 
-        function checkScroll() {
-            var sameIndex = 0;
-            for (var i = 0; i < fromLeftElements.length; i++) {
-                var element = fromLeftElements[i];
-                var top = element.getBoundingClientRect().top;
-                if (top - window.innerHeight < -100 && element.classList.contains('hidden')) {
-                    element.style.opacity = '0';
-                    element.style.animationDelay = (sameIndex * 50) + 'ms';
-                    element.classList.remove('hidden');
-                    element.classList.add('from-left');
-                    if (top > 0)
-                        sameIndex++;
-                }
-            }
-        }
-
-        window.addEventListener('scroll', checkScroll);
-        checkScroll();
-
-        $(window).bind("load", function () {
-            setTimeout(function () {
-                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=2480104438/size=large/bgcol=242C33/linkcol=4ec5ec/artwork=none/track=1054051456/transparent=true/');
-            }, 100);
-
-            setTimeout(function() {
-                console.clear();
-                console.log('%c Welcome to my site! I\'d love to be a part of your dev team!', 'background: #111; color: #43a3f2; font-size: 2em');
-            }, 500);
-        });
-
-        $(document).ready(function () {
-            startMatter();
-        });
-    </script>
 </body>
-
 </html>

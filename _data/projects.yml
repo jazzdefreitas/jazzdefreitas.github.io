@@ -122,21 +122,21 @@
 ##    - text: View Site
 ##      href: https://java2python.pythonanywhere.com/
 
-- title: K-means Iris Classification
-  body: >
-    This is a program that uses a k-means clustering
-    algorithm to classify different species of Iris plants.
-    I made this for my artificial intelligence course in college.
-  image: k-means.png
-  buttons:
-    - text: View on GitHub
-      href: https://github.com/JazzDeFreitas/k-means-iris-classification
+#- title: K-means Iris Classification
+#  body: >
+#    This is a program that uses a k-means clustering
+#    algorithm to classify different species of Iris plants.
+#    I made this for my artificial intelligence course in college.
+#  image: k-means.png
+#  buttons:
+#    - text: View on GitHub
+#      href: https://github.com/JazzDeFreitas/k-means-iris-classification
 
-- title: "Microcontroller Piano"
-  body: >
-    A microcontroller project I assembled and programmed in assembly using a TI MSP430.
-    It is a piano made on a breadboard with buttons, a volume knob, a speaker, and a built-in song.
-  image: msp430piano.png
-  buttons:
-    - text: View on GitHub
-      href: https://github.com/jazzdefreitas/msp430Piano
+#- title: "Microcontroller Piano"
+#  body: >
+#    A microcontroller project I assembled and programmed in assembly using a TI MSP430.
+#    It is a piano made on a breadboard with buttons, a volume knob, a speaker, and a built-in song.
+#  image: msp430piano.png
+#  buttons:
+#    - text: View on GitHub
+#      href: https://github.com/jazzdefreitas/msp430Piano

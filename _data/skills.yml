@@ -41,3 +41,62 @@ big:
   - Android Studio
   - Eclipse
   - CodeLite
+
+categories:
+  - name: Languages
+    skills:
+      - PHP
+      - Javascript
+      - Typescript
+      - Python
+      - Java
+      - "C#"
+      - C++
+      - Dart
+
+  - name: Frontend
+    skills:
+      - HTML
+      - CSS
+      - Sass/SCSS
+      - Vue.js
+      - Tailwind CSS
+      - Bootstrap
+      - Vuetify
+
+  - name: Backend
+    skills:
+      - Laravel
+      - Django
+      - Node.js
+      - WordPress
+
+  - name: Mobile
+    skills:
+      - Flutter
+      - Ionic
+      - Capacitor
+      - Cordova
+
+  - name: Database & APIs
+    skills:
+      - SQL
+      - GraphQL
+      - Redis
+
+  - name: Cloud & DevOps
+    skills:
+      - AWS
+      - Docker
+      - Github Actions
+      - "Git/GitHub"
+
+  - name: Tools
+    skills:
+      - PhpStorm
+      - PyCharm
+      - VS Code
+      - Xcode
+      - Android Studio
+      - Phaser
+      - Jekyll
